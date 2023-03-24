@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "azehmwcluster-ca0d"
+    labels:
+        app: "azehmwcluster-ca0d"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: aze-hmwclustera9f8-azehmwcluster-ca0d.5cec8e82cb684b9f9fe3.uksouth.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "azehmwcluster-ca0d"
+                servicePort: 80
