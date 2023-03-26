@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "azehmwcluster-e094"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "azehmwcluster-e094"
+  template:
+    metadata:
+      labels:
+        app: "azehmwcluster-e094"
+    spec:
+      containers:
+        - name: "azehmwcluster-e094"
+          image: "azehmwreg.azurecr.io/azehmwcluster"
+          ports:
+          - containerPort: 80
